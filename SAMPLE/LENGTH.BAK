@@ -1,0 +1,82 @@
+/**/
+
+
+#include<iostream>
+#include<conio.h>
+using namespace std ;
+class Length
+{
+   private:
+	  int f,ff,fff,fd,i,fa,itra,fb;
+   public:
+   /*DEFAULT CONSTRUCTOR*/
+	  Length()
+	  {
+		 f=0;
+		 i=0;
+		 fff=0;
+	  }
+   /*PARAMITRIZED CONSTRUCTOR*/
+/*	  Length (int fi,int ii)
+	  {
+		 f=fi;
+		 i=ii%12;
+		 fa=ii/12;
+		 cout<<f<<" "<<i<<" "<<fa<<endl;
+	 //	 f=f+f+fa;
+	  //	 i=i+i;
+	//	 cout<<"Feet="<<f<<endl<<"Inch="<<i;
+	  }                            */
+	  /*COPY CONSTRUCTOR DECLARE*/
+	  void AddLength(int fi, int ii);
+	  void Show()
+	  {
+	   //	f=f+fb;
+	   //	 i=i+i;
+		cout<<"\nFeet="<<fff<<endl<<"Inch="<<i;
+	  }
+};
+/*COPY CONSTRUCTOR DEFINATION*/
+void Length :: AddLength(int fi,int ii)
+	  {
+	   //	 f=f+f+fa;
+
+			 f=fi;
+			// ff=fi;
+		 i=ii%12;
+		 fa=ii/12;
+		 //fb=f+fa;
+		 //f=f+fb;
+
+		 //fb=ii/12;
+//		 f=f+f+fa;
+		cout<<"\nFeet="<<f<<" Inch="<<i<<" "<<fa<<"\n\n";
+		itra=1;
+		 if(itra==1)
+		 {
+		  fb=f+fa;
+//		  i=i+i;
+		  cout<<"\n1case";
+		 }
+		 if(itra==2)
+		 {
+		  fff=f+fb;
+		  i=i+i;
+		  cout<<"\n2case";
+		 }
+		 itra++;
+//		 cout<<"Feet="<<fff<<"Inch="<<i<<"\n";
+	  }
+
+int main()
+{
+  //clrscr();
+//  Length l1(5,14);  //PARAMETER CONSTRUCTOR CALL
+//  Length l2(4,2);  //PARAMETER CONSTRUCTOR CALL
+  Length l3;
+  l3.AddLength(5,14); //COPY CONSTRUCTOR FUNCTION CALL
+  l3.AddLength(4,2);
+  l3.Show();
+return 0;
+}
+

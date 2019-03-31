@@ -1,0 +1,57 @@
+/*CPP PROGRAM TO OVERLOAD AND WITHOUT OVERLOAD THE OPERATORS +,-,*,/,+=,-=,*=,/= FOR COMPLEX NUMBERS
+-GESHWAR KUMAR
+-21/10/2016*/
+
+#include<iostream>
+
+using namespace std;
+
+/*CLASS DEFINITION*/
+class Complex
+{
+	/*VARIABLE DECLARATION*/
+		int real,img,res_real,res_img ;
+	public :
+		/*CONSTRUCTER DEFINITION*/
+		Complex()
+		{
+			real = img = res_real = res_img = 0;
+		}
+		/*FUNCTION DECLARATION*/
+		void Input() ;
+		Complex operator +(Complex) ;
+		void Output() ;
+};//END CLASS
+/*FUNCTION DEFINITION*/
+void Complex :: Input()
+{
+	cout << "Real Part = " ;cin >> real ;
+	cout << "Imaginary Part = ";cin >> img ;
+}
+
+
+void Complex :: Output()
+{
+	cout << "\nResult = ";
+	if(res_img >= 0)
+	{
+		cout << res_real << " + i" << res_img ;
+	}
+	else
+	{
+		cout << res_real << " " << res_img << "i" ;
+	}	
+}
+int main()	//MAIN FUNCTION
+{
+	Complex com ,com1,com2,res; 	//CLASS OBJECT
+	cout << endl << "/*CPP PROGRAM TO ADDITION OF TWO COMPLEX NUMBER\n-GESHWAR KUMAR\n-22/07/2016*/\n\n" ;
+	/*FUNCTION CALLING USING OBJECT*/
+	cout << "Enter the fisrt complex number:(a+ib)" << endl;
+	com1.Input() ;
+	cout << "Enter the second complex number:(c+id)" << endl ;
+	com2.Input() ;
+	
+	res.Output();
+return 0 ;
+}	//END MAIN

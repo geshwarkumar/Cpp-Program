@@ -1,0 +1,27 @@
+/*CPP PROGRAM TO DEMONSTRAT FILE HANDLING READ()
+-GESHWAR KUMAR
+-23/09/2016*/
+#include<fstream.h>
+int main()
+{
+		char name[30];
+		int marks;
+		
+		ofstream fout("student.out");//connect student.out to fout
+		//read first student details
+		cout<<"Enter name:";cin>>name;
+		cout<<"Enter Marks:";cin>>marks;
+		
+		//write to a file
+		fout<<name<<endl;
+		fout<<marks<<endl;
+		
+		//read second student details
+		cout<<"Enter name:";cin>>name;
+		cout<<"Enter Marks:";cin>>marks;
+		
+		//write to a file
+		fout<<name<<endl;
+		fout<<marks<<endl;
+return 0;
+}
